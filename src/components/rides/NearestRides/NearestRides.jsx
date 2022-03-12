@@ -11,7 +11,7 @@ const NearestRides = ({ city, state, rides }) => {
   }, [city, state, rides])
 
   return (
-    <div>
+    <div style={{color:"#fff"}}>
       { sorted.length === 0 ? "No Nearest Rides Available!" :
         sorted.map((item, index) =>
         (<RideCard key={index} item={item} distance={item.distance}/>)

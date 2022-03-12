@@ -11,7 +11,7 @@ const PastRides = ({PastRides, city, state }) => {
     }, [city, state, PastRides])
 
     return (
-        <div>
+        <div style={{color:"#fff"}}>
              {Past.length === 0 ? "No Past Rides Available!" :
                  Past.map((item, index) =>
                         (<RideCard key={index} item={item} distance={item.destination_station_code - item.origin_station_code} />)

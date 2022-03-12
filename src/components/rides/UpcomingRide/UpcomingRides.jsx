@@ -10,7 +10,7 @@ const UpcomingRides = ({ UpcomingRides, city, state }) => {
         setUpcoming(sortedUpcoming);
     }, [city, state, UpcomingRides])
     return (
-        <div>
+        <div style={{color:"#fff"}}>
             {Upcoming.length === 0 ? "No Upcoming Rides Available!" :
                 Upcoming.map((item, index) =>
                 (<RideCard key={index} item={item} distance={item.destination_station_code - item.origin_station_code}/>)

@@ -33,9 +33,10 @@ const Rides = ({ rides, user }) => {
         setValue(newValue);
     };
 
-    const findNearest = (ride) => {
+    const findNearest = () => {
         const temp = []
-        ride.map((i) =>
+        rides.map((i) =>
+            // eslint-disable-next-line array-callback-return
             i.station_path.map((a) => {
                 if (a - user.station_code >= 0 && a - user.station_code <= 3) {
                     temp.push({ ...i, distance: a - user.station_code })
@@ -50,7 +51,7 @@ const Rides = ({ rides, user }) => {
 
     useEffect(() => {
 
-        const NearestRides = findNearest(rides).sort((a, b) => a.distance > b.distance ? 1 : -1);
+        const NearestRides = findNearest().sort((a, b) => a.distance > b.distance ? 1 : -1);
 
 
         const UpcomingRides = rides.filter(a => {
@@ -67,7 +68,7 @@ const Rides = ({ rides, user }) => {
         setPastRide(PastRides)
         setNearestRide(NearestRides)
         console.log("NR: ", NearestRides);
-    }, [rides])
+    }, [rides, user])
 
 
 
