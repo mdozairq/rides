@@ -11,16 +11,15 @@ function App() {
   const fetchRidesDetails = async () => {
     // fetch products and destucture it on app load, it returns promise
     const response = await axios.get("https://assessment.api.vweb.app/rides");
-    // console.log(response);
-    // setting state as fetched products
+    // setting state as fetched
     setRides(response.data);
   };
 
   const fetchUsersDetails = async () => {
     // fetch products and destucture it on app load, it returns promise
     const response = await axios.get("https://assessment.api.vweb.app/user");
-    console.log(response);
-    // setting state as fetched products
+    // console.log(response);
+    // setting state as fetched data
     setUser(response.data);
   };
 
