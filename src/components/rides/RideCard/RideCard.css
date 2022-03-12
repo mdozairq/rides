@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.card{
+    padding: 1.5rem;
+    margin-top: 1rem;
+    color: white;
+    background-color: #171717;
+    border-radius: 10px;
+    line-height: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+}
+.card .section1{
+    /* background: orange; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+}
+.card .section1 .img{
+    height: 150px;
+    width: 230px;
+}
+.card .section1 img{
+    height: 150px;
+    width: 230px;
+    border-radius: 5px;
+}
+.card .section1 .info{
+    margin-left: 30px;
+    /* background: blueviolet; */
+}
+.card .section2{
+    /* background: rgb(187, 162, 115); */
+}
+.card .section2 span{
+    background: #0000008F;
+    border-radius: 15px;
+    margin-left: 10px;
+    padding: 0px 10px;
+    padding-bottom: 2px;
+}
